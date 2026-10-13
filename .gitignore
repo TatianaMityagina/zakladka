@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+.cache/
+.DS_Store
+# свои книги не коммитим — только demo-data (общественное достояние)
+/books/
+.idea/

@@ -1,0 +1,20 @@
+{
+  "name": "zakladka",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["server", "client"],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w server && npm run build -w client",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "onnxruntime-node@1.21.0": true,
+    "sharp": false,
+    "protobufjs": false
+  }
+}
